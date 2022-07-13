@@ -18,10 +18,6 @@ function urlB64ToUint8Array(base64String) {
   providedIn: 'root'
 })
 export class NotificationService {
-  constructor() {
-    this.requestPermission()
-  }
-
   async requestPermission() {
     // Prevent the user from clicking the subscribe button multiple times.
     // subscribeButton.disabled = true;

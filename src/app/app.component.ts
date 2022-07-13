@@ -8,6 +8,6 @@ import { NotificationService } from './notification.service';
 })
 export class AppComponent {
   title = 'angular-web-push';
-  constructor(private ns: NotificationService) {
+  constructor(public ns: NotificationService) {
   }
 }

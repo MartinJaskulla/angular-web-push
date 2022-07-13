@@ -8,7 +8,7 @@ const VAPID_PUBLIC_KEY =
   "BGSwY3Q-1kPYEt8nImJYj8bvpvUa6qMTiylb4o646fRb5jQI3x9hsrhlJLAXvgpaLAbFQ3zXERjrZRFltaGWCc8";
 const VAPID_PRIVATE_KEY = "VYkMwp9PtoyUEvpgY62Us4Z4CmfJ_-k3MQmO_JarSOI";
 const VAPID_SUBJECT = "mailto:test@test.test";
-const PORT = "3000";
+const PORT = "3333";
 
 const adapter = new FileSync(".data/db.json");
 const db = low(adapter);
