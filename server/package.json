@@ -1,0 +1,21 @@
+{
+  "name": "angular-web-push-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "clean": "[ -e .data/db.json ] && rm .data/db.json",
+    "start": "npm run clean; node server.js;",
+    "debug": "npm run clean; node --inspect-brk server.js;"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "web-push": "3.4.1",
+    "body-parser": "1.19.0",
+    "express-session": "1.16.2",
+    "lowdb": "1.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
