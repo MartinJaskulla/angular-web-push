@@ -48,7 +48,7 @@ export class NotificationService {
       applicationServerKey: urlB64ToUint8Array(environment.VAPID_PUBLIC_KEY)
     });
     // notifyMeButton.disabled = false;
-    // TODO Send topics along e.g. flag pole and GER26
+    // Send topics along e.g. flag pole and GER26
     // ../angular-web-push-server
     console.log("Send to backend to store in db", subscription)
     // fetch('/add-subscription', {

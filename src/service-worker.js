@@ -15,4 +15,6 @@ self.addEventListener('push', event => {
 
 self.addEventListener('notificationclick', event => {
   console.log('notificationclick', event)
+  event.notification.close();
+  event.waitUntil(self.clients.openWindow('https://stellular-lolly-5145bc.netlify.app/'));
 });
