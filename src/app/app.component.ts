@@ -7,7 +7,12 @@ import { NotificationService } from './notification.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-web-push';
+  sub
+
   constructor(public ns: NotificationService) {
+  }
+
+  async onClick() {
+    this.sub = await this.ns.requestPermission()
   }
 }

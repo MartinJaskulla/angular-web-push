@@ -24,7 +24,7 @@ export class NotificationService {
     const result = await Notification.requestPermission();
     if (result === 'denied') {
       console.error('The user explicitly denied the permission request.');
-      return;
+      return "Denied";
     }
     if (result === 'granted') {
       console.info('The user accepted the permission request.');
@@ -37,7 +37,7 @@ export class NotificationService {
 
       // notifyMeButton.disabled = false;
       // unsubscribeButton.disabled = false;
-      return;
+      return existingSubscription;
     }
     const subscription = await registration.pushManager.subscribe({
       userVisibleOnly: true,
@@ -47,6 +47,7 @@ export class NotificationService {
     // Send topics along e.g. flag pole and GER26
     // ../angular-web-push-server
     console.log("Send to backend to store in db", subscription)
+    return subscription
     // fetch('/add-subscription', {
     //   method: 'POST',
     //   headers: {
