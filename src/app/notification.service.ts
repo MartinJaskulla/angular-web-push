@@ -38,9 +38,9 @@ export class NotificationService {
       userVisibleOnly: true,
       applicationServerKey: urlB64ToUint8Array(environment.VAPID_PUBLIC_KEY)
     });
-    // Send topics along e.g. flag pole and GER26
-    console.log("Send to backend to store in db", subscription)
-    // Lambda
+
+    console.log("subscription", subscription)
+
     fetch('https://mx1xey75gc.execute-api.eu-central-1.amazonaws.com/Dev', {
       method: 'POST',
       headers: {
@@ -48,7 +48,7 @@ export class NotificationService {
       },
       body: JSON.stringify({
         "sailNumber": "FRA54861",
-        subscription,
+        subscription: JSON.stringify(subscription),
         "topics": [
           "FlagPole"
         ]
