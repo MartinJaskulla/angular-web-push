@@ -47,7 +47,7 @@ export class NotificationService {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        "sailNumber": "GER10",
+        "sailNumber": "FRA54861",
         subscription,
         "topics": [
           "FlagPole"
