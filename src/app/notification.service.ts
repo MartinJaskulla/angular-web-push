@@ -65,3 +65,16 @@ export class NotificationService {
     return subscription
   }
 }
+
+/*
+navigator.serviceWorker.ready.then(function(reg) {
+  reg.pushManager.getSubscription().then(function(subscription) {
+    subscription.unsubscribe().then(function(successful) {
+      // You've successfully unsubscribed
+    }).catch(function(e) {
+      // Unsubscribing failed
+    })
+  })
+});
+
+ */
